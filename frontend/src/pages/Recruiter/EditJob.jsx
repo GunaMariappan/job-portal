@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import api from '../../api/axios'
-import Spinner from '../../components/Spinner'
+import Spinner from '../../Components/Spinner'
 import toast from 'react-hot-toast'
 
 const CATEGORIES = ['Technology', 'Healthcare', 'Finance', 'Design', 'Marketing', 'Engineering', 'Education', 'Startup', 'Other']

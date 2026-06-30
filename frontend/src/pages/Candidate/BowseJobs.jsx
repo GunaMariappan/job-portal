@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import api from '../../api/axios'
-import JobCard from '../../components/JobCard'
-import Spinner from '../../components/Spinner'
+import JobCard from '../../Components/JobCard'
+import Spinner from '../../Components/Spinner'
 import toast from 'react-hot-toast'
 
 const CATEGORIES = ['All', 'Technology', 'Healthcare', 'Finance', 'Design', 'Marketing', 'Engineering', 'Education']
