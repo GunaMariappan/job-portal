@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../api/axios'
-import Spinner from '../../Components/Spinner'
+import Spinner from '../../components/Spinner'
 import toast from 'react-hot-toast'
 
 const Applicants = () => {
