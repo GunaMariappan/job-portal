@@ -1,13 +1,15 @@
 import axios from 'axios'
 
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'
+
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
 })
 
-// Request Interceptor — every requestla token attach pannum
+// Request Interceptor — every request la token attach pannum
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('access_token')
@@ -31,7 +33,7 @@ api.interceptors.response.use(
       try {
         const refreshToken = localStorage.getItem('refresh_token')
         const res = await axios.post(
-          'http://localhost:8000/api/auth/token/refresh/',
+          `${BASE_URL}/auth/token/refresh/`,
           { refresh: refreshToken }
         )
 
